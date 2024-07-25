@@ -1,5 +1,46 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-gorilla-csrf (1.7.2-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 1.7.2
+  * Update versioned dependencies as per go.mod
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anthony Fok <foka@debian.org>  Fri, 08 Dec 2023 23:36:30 -0700
+
+golang-github-gorilla-csrf (1.7.1-1) unstable; urgency=medium
+
+  * New upstream version 1.7.1
+  * Reorder fields in debian/control
+  * Bump dependency: golang-github-pkg-errors-dev (>= 0.9.1)
+  * Change Section from devel to golang
+  * Bump Standards-Version to 4.6.2 (no change)
+  * Bump debhelper build-dependency to debhelper-compat (= 13)"
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+
+ -- Anthony Fok <foka@debian.org>  Mon, 13 Mar 2023 07:33:27 -0600
+
+golang-github-gorilla-csrf (1.6.2-4) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + golang-github-gorilla-csrf-dev: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 17 Dec 2022 15:59:58 +0000
+
+golang-github-gorilla-csrf (1.6.2-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.0, no changes needed.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sat, 21 Aug 2021 11:30:51 +0100
+
+golang-github-gorilla-csrf (1.6.2-2) unstable; urgency=medium
+
+  * Source-only upload for migration into testing
+
+ -- Anthony Fok <foka@debian.org>  Mon, 06 Jan 2020 03:34:55 -0700
+
+golang-github-gorilla-csrf (1.6.2-1) unstable; urgency=medium
+
+  * Initial release (Closes: #946016)
+
+ -- Anthony Fok <foka@debian.org>  Mon, 02 Dec 2019 15:26:24 -0700
