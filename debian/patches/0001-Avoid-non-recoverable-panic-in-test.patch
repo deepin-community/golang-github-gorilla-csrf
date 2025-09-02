@@ -1,0 +1,48 @@
+From: Martina Ferrari <tina@debian.org>
+Date: Fri, 7 Mar 2025 20:29:22 +0000
+Subject: Avoid non-recoverable panic in test
+
+Since go 1.24 crypto/rand throws a non-recoverable fatal error when it
+fails to read random data, so this test needs to be disabled.
+See https://go.dev/issue/66821
+
+Forwarded: https://github.com/gorilla/csrf/issues/183
+---
+ helpers_test.go | 8 ++++++--
+ 1 file changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/helpers_test.go b/helpers_test.go
+index 399db8d..285cd5c 100644
+--- a/helpers_test.go
++++ b/helpers_test.go
+@@ -2,10 +2,8 @@ package csrf
+ 
+ import (
+ 	"bytes"
+-	"crypto/rand"
+ 	"encoding/base64"
+ 	"fmt"
+-	"io"
+ 	"log"
+ 	"mime/multipart"
+ 	"net/http"
+@@ -204,6 +202,11 @@ func TestXOR(t *testing.T) {
+ 	}
+ }
+ 
++// Since go 1.24 crypto/rand throws a non-recoverable fatal error when it fails
++// to read random data, so this test needs to be disabled.
++// See https://go.dev/issue/66821
++
++/*
+ // shortReader provides a broken implementation of io.Reader for testing.
+ type shortReader struct{}
+ 
+@@ -226,6 +229,7 @@ func TestGenerateRandomBytes(t *testing.T) {
+ 		t.Fatalf("generateRandomBytes did not report a short read: only read %d bytes", len(b))
+ 	}
+ }
++*/
+ 
+ func TestTemplateField(t *testing.T) {
+ 	s := http.NewServeMux()
