@@ -1,6 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: https://github.com/gorilla/csrf
 Upstream-Name: gorilla/csrf
+Files-Excluded: vendor
 
 Files: *
 Copyright: 2015-2018 The Gorilla Authors

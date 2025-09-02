@@ -1,25 +1,25 @@
 Source: golang-github-gorilla-csrf
-Section: golang
-Priority: optional
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Uploaders: Anthony Fok <foka@debian.org>
-Rules-Requires-Root: no
+Uploaders: Anthony Fok <foka@debian.org>,
+Section: golang
+Testsuite: autopkgtest-pkg-go
+Priority: optional
 Build-Depends: debhelper-compat (= 13),
                dh-sequence-golang,
                golang-any (>= 2:1.20~),
                golang-github-gorilla-securecookie-dev (>= 1.1.2),
-Testsuite: autopkgtest-pkg-go
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-gorilla-csrf
 Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-gorilla-csrf.git
 Homepage: https://github.com/gorilla/csrf
+Rules-Requires-Root: no
 XS-Go-Import-Path: github.com/gorilla/csrf
 
 Package: golang-github-gorilla-csrf-dev
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends},
-         golang-github-gorilla-securecookie-dev (>= 1.1.2),
+Depends: golang-github-gorilla-securecookie-dev (>= 1.1.2),
+         ${misc:Depends},
 Description: Cross Site Request Forgery (CSRF) prevention middleware for Go
  gorilla/csrf is a HTTP middleware library that provides cross-site request
  forgery (CSRF) protection.  It includes:

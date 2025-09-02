@@ -1,3 +1,24 @@
+golang-github-gorilla-csrf (1.7.2+ds1-2) unstable; urgency=high
+
+  * Team upload.
+  * SECURITY UPDATE:
+    - CVE-2025-24358 / GHSA-rq77-p4h8-4crw:
+      Fix CSRF via form submission from origins that share a top level
+      domain with the target origin (Closes: #1103584).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Mon, 28 Apr 2025 11:48:38 +0200
+
+golang-github-gorilla-csrf (1.7.2+ds1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Repack to exclude vendor/ from source package.
+  * Add new patch to avoid non-recoverable panic in test.
+    Closes: #1098554
+  * d/control: Bump Standards-Version (no changes).
+  * Do not build examples, ship them as documentation.
+
+ -- Martina Ferrari <tina@debian.org>  Fri, 07 Mar 2025 21:06:01 +0000
+
 golang-github-gorilla-csrf (1.7.2-1) unstable; urgency=medium
 
   * New upstream version 1.7.2
